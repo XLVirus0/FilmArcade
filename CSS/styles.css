@@ -140,7 +140,7 @@ header h1, footer p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 412px) {
 
   .auto-slider {
     width: 90%;
