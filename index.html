@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <title>Combined Slider</title>
+</head>
+
+<body>
+
+  <!-- هدر -->
+  <div class="header" id="header">
+    <ul class="header-left">
+      <li><a href="pages/login.html"><img src="images/profile.png" alt="Profile Icon" class="profile-icon"> <span class="Profile-text">ورود به حساب</span></a></li>
+      <li><a href="pages/pass.html"><img src="images/ticket.png" alt="Ticket Icon" class="ticket-icon"> <span class="Sub-text">خرید اشتراک</span></a></li>
+    </ul>
+    <ul class="header-right">
+      <li><a href="#">فیلم</a></li>
+      <li><a href="#">سریال</a></li>
+      <li><a href="#">انیمیشن</a></li>
+      <li><a href="#" id="search-toggle">جستجو</a></li>
+    </ul>
+    <div class="search-bar" id="search-bar">
+      <input type="text" placeholder="جستجو..." id="search-input">
+    </div>
+  </div>
+
+  <!-- اسلایدر تک عکسی -->
+  <div class="auto-slider">
+    <img src="images/img101 - Copy.jpg" alt="Slide 1" class="active">
+    <img src="images/img102 - Copy.jpg" alt="Slide 2">
+    <img src="images/img103 - Copy.jpg" alt="Slide 3">
+    <img src="images/img104 - Copy.jpg" alt="Slide 4">
+    <img src="images/img105 - Copy.jpg" alt="Slide 5">
+  </div>
+
+  <!-- اسلایدر چند کارتی -->
+  <div class="main-content">
+    <div class="slider-container">
+      <button id="prev-btn" class="nav-btn" disabled>&lt;</button>
+      <div class="slider">
+        <!-- کارت‌ها -->
+        <div class="card">
+          <img src="images/img101.jpg" alt="Thumbnail">
+          <div class="content">کارت 1</div>
+          <a href="https://example.com" class="watch-btn" target="_blank">تماشا</a>
+        </div>
+        <div class="card">
+          <img src="images/img102.jpg" alt="Thumbnail">
+          <div class="content">کارت 2</div>
+          <a href="https://example.com" class="watch-btn" target="_blank">تماشا</a>
+        </div>
+        <div class="card">
+          <img src="images/img103.jpg" alt="Thumbnail">
+          <div class="content">کارت 3</div>
+          <a href="https://example.com" class="watch-btn" target="_blank">تماشا</a>
+        </div>
+        <div class="card">
+          <img src="images/img104.jpg" alt="Thumbnail">
+          <div class="content">کارت 4</div>
+          <a href="https://example.com" class="watch-btn" target="_blank">تماشا</a>
+        </div>
+        <div class="card">
+          <img src="images/img105.jpg" alt="Thumbnail">
+          <div class="content">کارت 5</div>
+          <a href="https://example.com" class="watch-btn" target="_blank">تماشا</a>
+        </div>
+        <div class="card">
+          <img src="images/img101.jpg" alt="Thumbnail">
+          <div class="content">کارت 6</div>
+          <a href="https://example.com" class="watch-btn" target="_blank">تماشا</a>
+        </div>
+        <div class="card">
+          <img src="images/img102.jpg" alt="Thumbnail">
+          <div class="content">کارت 7</div>
+          <a href="https://example.com" class="watch-btn" target="_blank">تماشا</a>
+        </div>
+      </div>
+      <button id="next-btn" class="nav-btn">&gt;</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 تمامی حقوق محفوظ است.</p>
+  </footer>
+</body>
+
+<script src="Script/script.js"></script>
+
+</html>

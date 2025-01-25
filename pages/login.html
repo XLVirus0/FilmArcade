@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم ورود و ثبت‌ نام</title>
+    <link rel="stylesheet" href="loginstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <div id="container" class="container">
+    <!-- FORM SECTION -->
+    <div class="row">
+        <!-- SIGN UP -->
+        <div class="col align-items-center flex-col sign-up">
+            <div class="form-wrapper align-items-center">
+                <div class="form sign-up">
+                    <div class="input-group">
+                        <i class='bx bxs-user'></i>
+                        <input type="text" placeholder="نام کاربری">
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bx-mail-send'></i>
+                        <input type="email" placeholder="ایمیل">
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="password" placeholder="رمز عبور">
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="password" placeholder="تأیید رمز عبور">
+                    </div>
+                    <button>
+                        ثبت‌نام
+                    </button>
+                    <p>
+                        <span>
+                            حساب کاربری دارید؟
+                        </span>
+                        <b onclick="toggle()" class="pointer">
+                            وارد شوید
+                        </b>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- END SIGN UP -->
+        <!-- SIGN IN -->
+        <div class="col align-items-center flex-col sign-in">
+            <div class="form-wrapper align-items-center">
+                <div class="form sign-in">
+                    <div class="input-group">
+                        <i class='bx bxs-user'></i>
+                        <input type="text" placeholder="نام کاربری">
+                    </div>
+                    <div class="input-group">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="password" placeholder="رمز عبور">
+                    </div>
+                    <button>
+                        ورود
+                    </button>
+                    <p>
+                        <b>
+                            فراموشی رمز عبور؟
+                        </b>
+                    </p>
+                    <p>
+                        <span>
+                            حساب کاربری ندارید؟
+                        </span>
+                        <b onclick="toggle()" class="pointer">
+                            ثبت‌نام کنید
+                        </b>
+                    </p>
+                </div>
+            </div>
+            <div class="form-wrapper">
+
+            </div>
+        </div>
+        <!-- END SIGN IN -->
+    </div>
+    <!-- END FORM SECTION -->
+</div>
+    <script src="../Script/loginjs.js"></script>
+</body>
+
+</html>
