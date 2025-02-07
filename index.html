@@ -1,93 +1,86 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="CSS/styles.css">
-  <link rel="icon" href="/images/FilmArcade.ico" type="image/x-icon">
-  <title>Film Arcade</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Film Arcade</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
-
 <body>
+    <header>
+        <nav>
+           <div class="top-bar">
+            <div class="logo">
+                <a href="#">Film Arcade</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Film</a></li>
+                <li><a href="#">Animation</a></li>
+                <li><a href="#">Search</a></li>
+            </ul>
+            <div class="auth">
+                <a href="#" class="login">Login</a>
+                <a href="#" class="signup">Signup</a>
+            </div>
+           </div>
+        </nav>
+    </header>
 
-  <!-- هدر -->
-  <div class="header" id="header">
-    <ul class="header-left">
-      <li><a href="pages/login.html"><img src="images/profile.png" alt="Profile Icon" class="profile-icon"> <span class="Profile-text">ورود به حساب</span></a></li>
-      <li><a href="pages/pass.html"><img src="images/ticket.png" alt="Ticket Icon" class="ticket-icon"> <span class="Sub-text">خرید اشتراک</span></a></li>
-    </ul>
-    <ul class="header-right">
-      <li><a href="#">فیلم</a></li>
-      <li><a href="#">سریال</a></li>
-      <li><a href="#">انیمیشن</a></li>
-      <li><a href="#" id="search-toggle">جستجو</a></li>
-    </ul>
-    <div class="search-bar" id="search-bar">
-      <input type="text" placeholder="جستجو..." id="search-input">
-    </div>
-  </div>
+    <main>
+        <!-- Featured Section -->
+        <section class="featured">
+            <div class="featured-content">
+                <img src="images/Squid-Game.png" alt="Squid Game Season 2">
+                <div class="overlay">
+                    <h2 class="overlay-title">Squid Game Season 2</h2>
+                    <p class="overlay-des">The second season of the South Korean dystopian thriller Squid Game.</p>
+                </div>
+            </div>
+            <div class="side-thumbnails">
+                <img src="images/Sing-2.png" alt="Sing 2">
+                <img src="images/Breaking-Bad.png" alt="Breaking Bad">
+                <img src="images/Attack-on-Titan.png" alt="Attack on Titan">
+            </div>
+        </section>
 
-  <!-- اسلایدر تک عکسی -->
-  <div class="auto-slider">
-    <img src="images/img101 - Copy.jpg" alt="Slide 1" class="active">
-    <img src="images/img102 - Copy.jpg" alt="Slide 2">
-    <img src="images/img103 - Copy.jpg" alt="Slide 3">
-    <img src="images/img104 - Copy.jpg" alt="Slide 4">
-    <img src="images/img105 - Copy.jpg" alt="Slide 5">
-  </div>
+        <!-- Best Arrives -->
+        <section class="category">
+            <h2>Best Arrives</h2>
+            <div class="grid" id="best-arrives"></div>
+        </section>
 
-  <!-- اسلایدر چند کارتی -->
-  <div class="main-content">
-    <div class="slider-container">
-      <button id="prev-btn" class="nav-btn" disabled>&lt;</button>
-      <div class="slider">
-        <!-- کارت‌ها -->
-        <div class="card">
-          <img src="images/img101.jpg" alt="Thumbnail">
-          <div class="content">کارت 1</div>
-          <a href="https://example.com" class="watch-btn" target="_blank">تماشا</a>
-        </div>
-        <div class="card">
-          <img src="images/img102.jpg" alt="Thumbnail">
-          <div class="content">کارت 2</div>
-          <a href="https://example.com" class="watch-btn" target="_blank">تماشا</a>
-        </div>
-        <div class="card">
-          <img src="images/img103.jpg" alt="Thumbnail">
-          <div class="content">کارت 3</div>
-          <a href="https://example.com" class="watch-btn" target="_blank">تماشا</a>
-        </div>
-        <div class="card">
-          <img src="images/img104.jpg" alt="Thumbnail">
-          <div class="content">کارت 4</div>
-          <a href="https://example.com" class="watch-btn" target="_blank">تماشا</a>
-        </div>
-        <div class="card">
-          <img src="images/img105.jpg" alt="Thumbnail">
-          <div class="content">کارت 5</div>
-          <a href="https://example.com" class="watch-btn" target="_blank">تماشا</a>
-        </div>
-        <div class="card">
-          <img src="images/img101.jpg" alt="Thumbnail">
-          <div class="content">کارت 6</div>
-          <a href="https://example.com" class="watch-btn" target="_blank">تماشا</a>
-        </div>
-        <div class="card">
-          <img src="images/img102.jpg" alt="Thumbnail">
-          <div class="content">کارت 7</div>
-          <a href="https://example.com" class="watch-btn" target="_blank">تماشا</a>
-        </div>
-      </div>
-      <button id="next-btn" class="nav-btn">&gt;</button>
-    </div>
-  </div>
+        <!-- Top Series -->
+        <section class="category">
+            <h2>Top Series</h2>
+            <div class="grid" id="top-series"></div>
+        </section>
 
-  <footer>
-    <p>&copy; 2025 تمامی حقوق محفوظ است.</p>
-  </footer>
+        <!-- New Animations -->
+        <section class="category">
+            <h2>New Animations</h2>
+            <div class="grid" id="new-animations"></div>
+        </section>
+
+        <!-- Subscribe Section -->
+        <section class="subscribe">
+            <h2>Subscribe to Newsletter</h2>
+            <div class="subscribe-box">
+                <input type="email" placeholder="Enter your email">
+                <button>Submit</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>Film Arcade © 2025</p>
+            <div class="social-icons">
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-telegram"></i>
+            </div>
+        </div>
+    </footer>
 </body>
-
-<script src="Script/script.js"></script>
-
 </html>
