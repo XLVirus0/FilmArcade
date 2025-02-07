@@ -1,0 +1,257 @@
+/* Smooth scrolling effect */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1FC6AF;
+    border-radius: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #18A58F;
+}
+
+/* Custom scrollbar for Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #1FC6AF transparent;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    background: #111;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    overflow-x: hidden;
+}
+
+header {
+    background: #111;
+    padding: 10px 20px;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.top-bar a, .logo a {
+    font-size: 1.25rem;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+.top-bar a:hover, .logo a:hover {
+    font-size: 1.5rem;
+    color: #1FC6AF;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-links a, .auth a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.auth a {
+    margin-left: 10px;
+}
+
+.featured {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.featured-content {
+    position: relative;
+    max-width: 75vw;
+}
+
+.featured-content img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.overlay {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 0;
+}
+
+.overlay-title {
+    padding-left: 1.25rem;
+}
+
+.overlay-des {
+    padding-left: 1.25rem;
+}
+
+.side-thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.side-thumbnails img {
+    width: 10vw;
+    min-width: 100px;
+    max-width: 175px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.side-thumbnails img:hover {
+    transform: scale(1.1);
+    border-radius: 10px;
+}
+
+.category {
+    padding: 1.5rem;
+}
+
+.slider {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.slider-container {
+    display: flex;
+    gap: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 25px;
+}
+
+.grid img {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+}
+
+.grid img:hover {
+    transform: scale(1.1);
+    border-radius: 15px;
+}
+
+.subscribe {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.125rem;
+}
+
+.subscribe-box {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.subscribe-box input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.subscribe-box button {
+    background: green;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+footer {
+    background: #222;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .featured {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 0 15px;
+    }
+    .top-bar a, .logo a {
+        font-size: 1.125rem;
+    }
+    .top-bar a:hover, .logo a:hover {
+        font-size: 1.25rem;
+    }
+    .grid img {
+        max-height: 40vh;
+    }
+    .side-thumbnails img {
+        width: 12vw;
+    }
+}
+
+@media (max-width: 412px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .top-bar a, .logo a {
+        font-size: 1rem;
+    }
+    .grid {
+        gap: 1rem;
+    }
+    .grid img {
+        max-height: 35vh;
+    }
+    .subscribe-box {
+        flex-direction: column;
+        align-items: center;
+    }
+    .side-thumbnails img {
+        width: 14vw;
+    }
+}
